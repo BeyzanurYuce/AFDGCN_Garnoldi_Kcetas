@@ -288,7 +288,7 @@ if args.mode == 'train':
 
                         Net = GARNOLDI(args.num_nodes, input_dim, output_dim, hidden_dim, cheb_k, num_layers, embed_dim)
 
-                        trainer.train(Net,args.net,args.FuncName,args.ArnoldiInit, args.dropuot, args.lr)
+                        trainer.train(Net,args.net,args.FuncName,args.ArnoldiInit, args.dropout, args.lr)
 elif args.mode == 'test':
     checkpoint = "./experiments/PEMS04/20240119141320/PEMS04_AFDGCN_best_model.pth"  # en yeni modeli kullan
     model.load_state_dict(torch.load(checkpoint, map_location=torch.device('cpu')))
